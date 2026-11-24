@@ -3,19 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi proyecto</title>
-  <!-- El nombre tiene que coincidir con el del archivo: style.css -->
+  <meta name="theme-color" content="#eee9df">
+  <title>Cookies — Datos personales como material para publicidad</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site-shell" id="site" aria-hidden="true">
+    <header class="topbar">
+      <a class="wordmark" href="#inicio" aria-label="Cookie data, inicio">COOKIE<br>DATA<span>®</span></a>
+      <span class="top-note">ESTUDIO DE DATOS PERSONALES<br>Y PUBLICIDAD DIGITAL</span>
+      <button class="small-link" id="reopen-consent" type="button">AJUSTES DE COOKIES <span>↗</span></button>
+    </header>
 
-  <h1>Datos personales como material para publicidad</h1>
-  <p>Una web que consiste en concienciar a la gente sobre el uso de las cookies.</p>
+    <main id="inicio">
+      <section class="intro">
+        <div class="eyebrow"><span class="dot"></span> UN RASTRO DIGITAL, EN SEIS BOCADOS</div>
+        <h1 aria-label="¿Qué saben de ti?"><span class="typing-line" id="title-first"></span><span class="typing-line title-second"><span id="title-second"></span><span class="typing-caret" aria-hidden="true"></span></span><span class="sr-only">¿Qué saben de ti?</span></h1>
+        <div class="intro-bottom">
+          <p>Las cookies guardan pequeñas señales sobre cómo navegas. Las marcas las convierten en perfiles para decidir qué anuncios mostrarte.</p>
+          <span class="scroll-note">PASA EL CURSOR<br>Y DESCUBRE <b>↓</b></span>
+        </div>
+      </section>
 
-  <button id="boton">Saber más</button>
-  <p id="texto" hidden>¿Para que sirven las cookies?</p>
+      <section class="cookie-section" aria-label="Tipos de datos que pueden recoger las cookies">
+        <div class="section-heading"><span>01 / SEÑALES QUE DEJAS</span><span>SELECCIONA UNA GALLETA ↗</span></div>
+        <div class="cookie-grid" id="cookie-grid"></div>
+      </section>
+      <footer><span>DATOS PERSONALES COMO MATERIAL PARA PUBLICIDAD</span><span>UN PROYECTO PARA MIRAR LO INVISIBLE <b>© 2026</b></span></footer>
+    </main>
+  </div>
 
-  <!-- El JavaScript va al final, cuando la página ya está cargada -->
+  <div class="consent-overlay" id="consent" role="dialog" aria-modal="true" aria-labelledby="consent-title">
+    <div class="consent-card">
+      <div class="consent-top"><span class="cookie-mark">C<span>.</span></span><span>AVISO DE PRIVACIDAD <i>01—02</i></span></div>
+      <div class="consent-content">
+        <p class="eyebrow">ANTES DE EMPEZAR</p>
+        <h2 id="consent-title">Esta web también<br>deja <em>miguitas.</em></h2>
+        <p class="consent-copy">Usamos cookies para recordar tus preferencias y entender cómo se utiliza esta página. Algunas ayudan a personalizar el contenido y la publicidad. Tú decides qué hacer con ellas.</p>
+        <div class="consent-actions">
+          <button class="accept-button" id="accept-cookies" type="button">Aceptar cookies <span>↗</span></button>
+          <button class="customize-button" id="customize-cookies" type="button">Personalizar cookies <span>+</span></button>
+        </div>
+        <div class="consent-foot"><span>DATOS PERSONALES COMO MATERIAL PARA PUBLICIDAD</span><span>LEE CON CALMA · 2026</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fall-screen" id="fall-screen" aria-hidden="true">
+    <div class="fall-letters" id="fall-letters"></div>
+    <div class="fall-center"><p>AL FINAL, TODO DEJA RASTRO.</p><button id="fall-accept" type="button">Aceptar cookies <span>↗</span></button></div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
